@@ -1,6 +1,7 @@
 import './App.css';
 
 function App() {
+  // eslint-disable-next-line no-alert
   const handleClick = () => alert('say mio');
   return (
     <div className="App">
