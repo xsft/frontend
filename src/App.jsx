@@ -1,16 +1,17 @@
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './App.css';
+import Form from './auth/core/Form';
+import SignInSide from './auth/sign-in/SignInSide';
+
+const theme = createTheme();
 
 function App() {
-  // eslint-disable-next-line no-alert
-  const handleClick = () => alert('say mio');
   return (
-    <div className="App">
-      <input type="text" placeholder="login" />
-      <input type="password" placeholder="password" />
-      <button type="button" onClick={handleClick}>
-        click me
-      </button>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Form>
+        <SignInSide />
+      </Form>
+    </ThemeProvider>
   );
 }
 
